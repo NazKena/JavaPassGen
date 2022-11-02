@@ -1,19 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-const password =document.getElementById("")
-
-
+const password =document.getElementById("password")
 
 function generatePassword() {
   console.log ("the button was clicked")
 }
 
+  const characters = ["a","b","c","d","e","f","g","h", "i","j","k","l","A","B","C","D","E","F","G","H","I","J","K","L","0","1","2","3","4","5","6","7","8","9","!","@","£","$","%","%",]
 
-  const charactersAmountCL = ["a","b","c","d","e","f","g","h","i","j,","k","l","m","n", "o","p","q","r,","s","t","u,","v","w","x","y","z"];
-  const charactersAmountLC = ["A","B","C","D","E","F","G","H","I","J","K","L","M","M","N","O,","P","Q","R","S","T","U","V","W","X","Y","Z"];
-  const charactersAmountNumbers = ["0,1,2,3,4,5,6,7,8,9"];
-  const charactersAmountSymbols= ["!","@","£","$","%","%","_","-","<",">",];
+  for (const i=0; i< passwordlength; i++) {
+    let randomNumber = Math.floor(Math.random()*characters.length);
+    password += characters.substring(randomNumber, randomNumber + 1)
+  }
 
 let passwordlength = prompt ("How many characters between 8 and 124 do you want in your password?");{
   if (isNaN(passwordlength))
